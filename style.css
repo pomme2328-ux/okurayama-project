@@ -1,0 +1,1923 @@
+/* ===============================
+   RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Noto Serif JP", serif;
+    background:#f8f7f3;
+    color:#222;
+    overflow-x:hidden;
+
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+li{
+    list-style:none;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    transition:.4s;
+
+}
+
+.navbar{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 70px;
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:1.7rem;
+
+    font-family:"Cormorant Garamond", serif;
+
+    letter-spacing:.12em;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+    gap:50px;
+
+}
+
+.nav-menu a{
+
+    color:white;
+
+    font-size:.9rem;
+
+    letter-spacing:.15em;
+
+    position:relative;
+
+    transition:.4s;
+
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    left:0;
+
+    width:0;
+
+    height:1px;
+
+    background:white;
+
+    transition:.4s;
+
+}
+
+.nav-menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1.08);
+
+    animation:zoomHero 15s ease-in-out infinite alternate;
+
+}
+
+/* 黒いフィルター */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+}
+
+/* ===============================
+   HERO CONTENT
+================================ */
+
+.hero-content{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:900px;
+
+}
+
+.hero-subtitle{
+
+    letter-spacing:.5em;
+
+    font-size:.85rem;
+
+    margin-bottom:30px;
+
+}
+
+.hero-content h1{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:6.5rem;
+
+    font-weight:500;
+
+    letter-spacing:.08em;
+
+    margin-bottom:35px;
+
+}
+
+.hero-copy{
+
+    font-size:1.2rem;
+
+    line-height:2.4;
+
+    margin-bottom:60px;
+
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.hero-button{
+
+    display:inline-block;
+
+    padding:18px 55px;
+
+    border:1px solid white;
+
+    color:white;
+
+    letter-spacing:.18em;
+
+    transition:.4s;
+
+}
+
+.hero-button:hover{
+
+    background:white;
+
+    color:#222;
+
+}
+
+/* ===============================
+   SCROLL
+================================ */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:20;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+.scroll-indicator span{
+
+    width:1px;
+
+    height:70px;
+
+    background:white;
+
+    animation:scrollLine 2s infinite;
+
+}
+
+.scroll-indicator p{
+
+    margin-top:15px;
+
+    font-size:.75rem;
+
+    letter-spacing:.35em;
+
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+
+@keyframes zoomHero{
+
+    from{
+
+        transform:scale(1.08);
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes scrollLine{
+
+    0%{
+
+        transform:scaleY(0);
+
+        transform-origin:top;
+
+    }
+
+    50%{
+
+        transform:scaleY(1);
+
+        transform-origin:top;
+
+    }
+
+    51%{
+
+        transform-origin:bottom;
+
+    }
+
+    100%{
+
+        transform:scaleY(0);
+
+        transform-origin:bottom;
+
+    }
+
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media(max-width:900px){
+
+.navbar{
+
+    padding:25px 30px;
+
+}
+
+.nav-menu{
+
+    gap:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+}
+
+.hero-copy{
+
+    font-size:1rem;
+
+}
+
+.hero-button{
+
+    padding:15px 35px;
+
+}
+
+.logo{
+
+    font-size:1.4rem;
+
+}
+
+}
+
+/* ===============================
+   CONCEPT
+================================ */
+
+.concept{
+
+    background:#f8f7f3;
+
+    padding:220px 10%;
+
+}
+
+.concept-container{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.concept-subtitle{
+
+    font-size:.85rem;
+
+    letter-spacing:.45em;
+
+    color:#9b7b52;
+
+    margin-bottom:40px;
+
+}
+
+.concept h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:4rem;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+    letter-spacing:.08em;
+
+    margin-bottom:80px;
+
+    color:#222;
+
+}
+
+.concept-text{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:2.8;
+
+    color:#555;
+
+    font-weight:300;
+
+}
+
+/* 見出しの下線 */
+
+.concept h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:2px;
+
+    background:#9b7b52;
+
+    margin:45px auto 0;
+
+}
+
+/* 少しふわっと表示 */
+
+.concept{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    animation:fadeUp 1.2s ease forwards;
+
+    animation-delay:.3s;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media(max-width:900px){
+
+.concept{
+
+    padding:140px 8%;
+
+}
+
+.concept h2{
+
+    font-size:2.7rem;
+
+    margin-bottom:50px;
+
+}
+
+.concept-text{
+
+    font-size:1rem;
+
+    line-height:2.3;
+
+}
+
+}
+
+/* ===============================
+   STORY
+================================ */
+
+.story{
+
+    background:white;
+
+}
+
+.story-image{
+
+    width:100%;
+
+    height:90vh;
+
+    overflow:hidden;
+
+}
+
+.story-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1.5s;
+
+}
+
+.story-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.story-content{
+
+    max-width:900px;
+
+    margin:160px auto;
+
+    text-align:center;
+
+    padding:0 10%;
+
+}
+
+.story-subtitle{
+
+    color:#6D2E3A;
+
+    letter-spacing:.45em;
+
+    font-size:.85rem;
+
+    margin-bottom:35px;
+
+}
+
+.story h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:4rem;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+    margin-bottom:70px;
+
+}
+
+.story-text{
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:2.8;
+
+    color:#555;
+
+    font-size:1.1rem;
+
+}
+
+.story h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:2px;
+
+    background:#6D2E3A;
+
+    margin:45px auto;
+
+}
+
+@media(max-width:900px){
+
+.story-image{
+
+    height:55vh;
+
+}
+
+.story-content{
+
+    margin:100px auto;
+
+}
+
+.story h2{
+
+    font-size:2.8rem;
+
+}
+
+.story-text{
+
+    font-size:1rem;
+
+    line-height:2.2;
+
+}
+
+}
+
+/* ===============================
+   INVITATION
+================================ */
+
+.invitation{
+
+    background:#ffffff;
+
+    padding:180px 10%;
+
+}
+
+.invitation-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.invitation-subtitle{
+
+    color:#6D2E3A;
+
+    font-size:.85rem;
+
+    letter-spacing:.45em;
+
+    margin-bottom:25px;
+
+}
+
+.invitation-header h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:4rem;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+}
+
+.invitation-image{
+
+    max-width:900px;
+
+    margin:0 auto 80px;
+
+    overflow:hidden;
+
+    border-radius:8px;
+
+}
+
+.invitation-image img{
+
+    width:100%;
+
+    display:block;
+
+    transition:1.2s;
+
+}
+
+.invitation-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.invitation-content{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.invitation-content p{
+
+    font-size:1.1rem;
+
+    line-height:2.8;
+
+    color:#555;
+
+}
+
+.notice{
+
+    margin-top:50px;
+
+    padding:25px;
+
+    border:1px solid #d8c6c9;
+
+    background:#faf7f8;
+
+}
+
+.notice p{
+
+    color:#6D2E3A;
+
+    font-size:.95rem;
+
+    line-height:2;
+
+}
+
+@media(max-width:900px){
+
+    .invitation{
+
+        padding:120px 8%;
+
+    }
+
+    .invitation-header h2{
+
+        font-size:2.8rem;
+
+    }
+
+    .invitation-content p{
+
+        font-size:1rem;
+
+        line-height:2.3;
+
+    }
+
+}
+
+/* ===============================
+   ARRIVAL
+================================ */
+
+.arrival{
+
+    background:#f8f7f3;
+
+    padding:220px 10%;
+
+}
+
+.arrival-content{
+
+    max-width:800px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.arrival-subtitle{
+
+    color:#6D2E3A;
+
+    font-size:.85rem;
+
+    letter-spacing:.45em;
+
+    margin-bottom:30px;
+
+}
+
+.arrival h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:4rem;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+    margin-bottom:60px;
+
+    color:#222;
+
+}
+
+.arrival h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:2px;
+
+    background:#6D2E3A;
+
+    margin:40px auto 0;
+
+}
+
+.arrival-text{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    font-size:1.1rem;
+
+    line-height:2.8;
+
+    color:#555;
+
+}
+
+@media(max-width:900px){
+
+    .arrival{
+
+        padding:140px 8%;
+
+    }
+
+    .arrival h2{
+
+        font-size:2.8rem;
+
+    }
+
+    .arrival-text{
+
+        font-size:1rem;
+
+        line-height:2.3;
+
+    }
+
+}
+
+/* ===============================
+   MISSION
+================================ */
+
+.mission{
+
+    background:#ffffff;
+
+}
+
+.mission-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.mission-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1.5s;
+
+}
+
+.mission-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.mission-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.mission-subtitle{
+
+    font-size:.85rem;
+
+    letter-spacing:.45em;
+
+    margin-bottom:25px;
+
+}
+
+.mission-overlay h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:5rem;
+
+    font-weight:400;
+
+    letter-spacing:.08em;
+
+}
+
+.mission-content{
+
+    max-width:700px;
+
+    margin:140px auto;
+
+    padding:0 10%;
+
+    text-align:center;
+
+}
+
+.mission-content p{
+
+    font-size:1.15rem;
+
+    line-height:2.8;
+
+    color:#555;
+
+}
+
+@media(max-width:900px){
+
+    .mission-image{
+
+        height:65vh;
+
+    }
+
+    .mission-overlay h2{
+
+        font-size:3rem;
+
+    }
+
+    .mission-content{
+
+        margin:90px auto;
+
+    }
+
+    .mission-content p{
+
+        font-size:1rem;
+
+        line-height:2.3;
+
+    }
+
+}
+
+
+/* ===============================
+   DRESS UP
+================================ */
+
+.dress-up{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    min-height:100vh;
+
+    background:#f8f7f3;
+
+}
+
+
+/* 写真 */
+
+.dress-image{
+
+    overflow:hidden;
+
+}
+
+
+.dress-image img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:750px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform 1.5s ease;
+
+}
+
+
+.dress-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+
+/* 文章 */
+
+.dress-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:120px 100px;
+
+}
+
+
+
+/* 英語タイトル */
+
+.dress-subtitle{
+
+    color:#6D2E3A;
+
+    font-size:.8rem;
+
+    letter-spacing:.5em;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* メインタイトル */
+
+.dress-content h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:3.8rem;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+    letter-spacing:.08em;
+
+    margin:0 0 60px;
+
+    color:#222;
+
+}
+
+
+.dress-content h2 span{
+
+    display:inline-block;
+
+}
+
+
+
+/* 本文 */
+
+.dress-text{
+
+    font-size:1.05rem;
+
+    line-height:2.8;
+
+    color:#555;
+
+    letter-spacing:.05em;
+
+}
+
+
+
+/* スマホ */
+
+@media(max-width:900px){
+
+
+.dress-up{
+
+    display:block;
+
+}
+
+
+.dress-image{
+
+    height:55vh;
+
+}
+
+
+.dress-image img{
+
+    min-height:0;
+
+    height:100%;
+
+}
+
+
+.dress-content{
+
+    padding:80px 8%;
+
+}
+
+
+.dress-content h2{
+
+    font-size:2.7rem;
+
+    line-height:1.5;
+
+}
+
+
+.dress-text{
+
+    font-size:1rem;
+
+    line-height:2.3;
+
+}
+
+
+}
+
+
+/* ===============================
+   LOUNGE
+================================ */
+
+.lounge{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    background:#ffffff;
+
+    min-height:90vh;
+
+}
+
+
+.lounge-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:120px 100px;
+
+    order:1;
+
+}
+
+
+.lounge-subtitle{
+
+    color:#6D2E3A;
+
+    font-size:.8rem;
+
+    letter-spacing:.5em;
+
+    margin-bottom:35px;
+
+}
+
+
+.lounge-content h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:3.8rem;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+    letter-spacing:.08em;
+
+    margin-bottom:60px;
+
+}
+
+
+.lounge-content h2 span{
+
+    display:inline-block;
+
+}
+
+
+.lounge-text{
+
+    color:#555;
+
+    font-size:1.05rem;
+
+    line-height:2.8;
+
+    letter-spacing:.05em;
+
+}
+
+
+
+.lounge-image{
+
+    overflow:hidden;
+
+    order:2;
+
+}
+
+
+.lounge-image img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:700px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:1.5s;
+
+}
+
+
+.lounge-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.lounge{
+
+    display:block;
+
+}
+
+
+.lounge-image{
+
+    height:55vh;
+
+}
+
+
+.lounge-image img{
+
+    min-height:0;
+
+}
+
+
+.lounge-content{
+
+    padding:80px 8%;
+
+}
+
+
+.lounge-content h2{
+
+    font-size:2.7rem;
+
+}
+
+
+.lounge-text{
+
+    font-size:1rem;
+
+    line-height:2.3;
+
+}
+
+
+}
+
+
+
+/* ===============================
+   DINNER
+================================ */
+
+.dinner{
+
+    background:#111;
+
+}
+
+
+.dinner-image{
+
+    position:relative;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+
+.dinner-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+
+.dinner-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.dinner-subtitle{
+
+    font-size:.8rem;
+
+    letter-spacing:.5em;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.dinner-overlay h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:4.5rem;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+    letter-spacing:.08em;
+
+}
+
+
+
+.dinner-overlay h2 span{
+
+    display:inline-block;
+
+}
+
+
+
+.dinner-content{
+
+    max-width:750px;
+
+    margin:0 auto;
+
+    padding:140px 10%;
+
+    text-align:center;
+
+}
+
+
+
+.dinner-content p{
+
+    color:white;
+
+    font-size:1.1rem;
+
+    line-height:2.8;
+
+    letter-spacing:.05em;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.dinner-image{
+
+    height:70vh;
+
+}
+
+
+.dinner-overlay h2{
+
+    font-size:2.8rem;
+
+}
+
+
+.dinner-content{
+
+    padding:90px 8%;
+
+}
+
+
+.dinner-content p{
+
+    font-size:1rem;
+
+    line-height:2.3;
+
+}
+
+
+}
+
+
+/* ===============================
+   APPLY MAIN POINT
+================================ */
+
+/* あなたについて・大切な方について */
+
+.apply-form h3{
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:2.2rem;
+
+    font-weight:400;
+
+    letter-spacing:.1em;
+
+    margin-top:80px;
+
+    margin-bottom:40px;
+
+    color:#222;
+
+}
+
+
+.apply-form h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:45px;
+
+    height:1px;
+
+    background:#6D2E3A;
+
+    margin:20px auto 0;
+
+}
+
+
+/* 入力項目は今まで通り縦 */
+
+.apply-form label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* 招待状ボタン */
+
+.apply-form button{
+
+    width:100%;
+
+    margin-top:70px;
+
+    padding:22px;
+
+    background:#6D2E3A;
+
+    color:#fff;
+
+    border:none;
+
+    font-size:1rem;
+
+    letter-spacing:.25em;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+
+.apply-form button:hover{
+
+    background:#B08A5A;
+
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer{
+
+    background:#111;
+
+    color:white;
+
+    height:70vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+.footer-content h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:5rem;
+
+    font-weight:400;
+
+    letter-spacing:.15em;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.footer-content p{
+
+    font-family:"Noto Serif JP", serif;
+
+    font-size:1.2rem;
+
+    line-height:2.5;
+
+    letter-spacing:.15em;
+
+    margin-bottom:80px;
+
+}
+
+
+
+.footer-content span{
+
+    font-size:.75rem;
+
+    letter-spacing:.5em;
+
+    color:#ccc;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.footer{
+
+    height:60vh;
+
+}
+
+
+.footer-content h2{
+
+    font-size:3rem;
+
+}
+
+
+.footer-content p{
+
+    font-size:1rem;
+
+}
+
+
+}
+
+
+/* ===============================
+   EXPERIENCE TITLE
+================================ */
+
+.experience{
+
+    background:#f8f7f3;
+
+    padding:180px 10% 120px;
+
+    text-align:center;
+
+}
+
+
+.experience-title{
+
+    max-width:800px;
+
+    margin:0 auto;
+
+}
+
+
+/* 英語タイトル */
+
+.experience-title p{
+
+    color:#6D2E3A;
+
+    font-size:.8rem;
+
+    letter-spacing:.5em;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* 日本語タイトル */
+
+.experience-title h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:4rem;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+    letter-spacing:.1em;
+
+    color:#222;
+
+    margin:0;
+
+}
+
+
+
+/* 下の装飾線 */
+
+.experience-title h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:60px;
+
+    height:1px;
+
+    background:#6D2E3A;
+
+    margin:45px auto 0;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.experience{
+
+    padding:120px 8% 80px;
+
+}
+
+
+.experience-title h2{
+
+    font-size:2.8rem;
+
+}
+
+
+}
+
+/* =====================================
+   Responsive Header
+===================================== */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    .logo{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:1.3rem;
+
+    white-space:nowrap;
+
+    letter-spacing:0;
+
+    }
+
+    .nav-menu{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .nav-menu a{
+
+        font-size:.85rem;
+
+        letter-spacing:.08em;
+
+    }
+
+}
