@@ -27,20 +27,26 @@
 
         <nav class="navbar">
 
-            <a href="#" class="logo">
-                恋、再発進。
-            </a>
+    <a href="#" class="logo">
+        恋、再発進。
+    </a>
 
-            <ul class="nav-menu">
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-                <li><a href="#concept">Concept</a></li>
-                <li><a href="#story">Story</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#apply">Apply</a></li>
+    <ul class="nav-menu">
 
-            </ul>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#apply">Apply</a></li>
 
-        </nav>
+    </ul>
+
+</nav>
 
     </header>
 
@@ -656,3 +662,21 @@
 
 
 </footer>
+
+
+<script>
+
+const hamburger = document.querySelector(".hamburger");
+
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click",()=>{
+
+    navMenu.classList.toggle("active");
+
+});
+
+</script>
+
+</body>
+</html>
